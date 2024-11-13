@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karyawan</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header bg-dark fw-bold text-light" id="Head">
+                TAMBAH KARYAWAN
+            </div>
+            <div class="card-body">
+    
+                <div class="mb-3">
+                    <label class="form-label">NIK</label>
+                    <input type="number" class="form-control" name="nama" id="txtNik">
+                </div>
+    
+                <div class="mb-3">
+                    <label class="form-label">Nama</label>
+                    <input type="text" class="form-control" name="nama" id="txtNama">
+                </div>
+    
+                <div class="mb-3">
+                    <label class="form-label">Masa Kerja</label>
+                    <input type="number" class="form-control" name="nama" id="txtMasa">
+                </div>
+    
+            </div>
+            <div class="card-footer" id="footer">
+                <button class="btn btn-primary" onclick="tambahKaryawan() + tampilkanKaryawan()">Simpan</button>
+                <button class="btn btn-secondary" onclick="cancel()">Batal</button>
+            </div>
+        </div>
+
+        <div class="card mt-5">
+            <div class="card-header bg-primary fw-bold text-light" id="HeadTab" >
+                DAFTAR KARYAWAN
+                <button type="button" class="btn btn-light ms-5" onclick="tampilkanKaryawan()">Tampilkan Tabel</button>
+            </div>
+            <div class="card-body">
+                <table class="table" id="tblKaryawan">
+                    <thead>
+                      <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">NIK</th>
+                        <th scope="col">Nama</th>
+                        <th scope="col">Masa Kerja</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Gaji</th>
+                        <th scope="col">Edit</th>
+                        <th scope="col">Hapus</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                  </table>
+            </div>
+            <div class="card-footer" id="FooterTab"></div>
+        </div>
+
+
+    </div>
+    
+
+
+    <script src="newKaryawan.js"></script>
+    <script type="module" src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
