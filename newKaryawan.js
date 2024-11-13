@@ -1,5 +1,5 @@
 const daftarKaryawan = [
-   
+
 ]
 
 
@@ -39,7 +39,7 @@ const tambahKaryawan = () => {
     const status = ""
     const gaji = ""
 
-   
+
 
 
     // jika tambah
@@ -127,11 +127,26 @@ const tambahKaryawan = () => {
             return
         }
 
+        for (let i = 0; i < daftarKaryawan.length; i++) {
+            if (daftarKaryawan[mode].nik === karyawanBaru.nik) {
+                true
+            }
+            else if (daftarKaryawan[i].nik === karyawanBaru.nik) { 
+                alert("Data sudah ada!")
+                return
+            }
+            
 
-        
+
+        }
 
 
-       
+
+
+
+
+
+
         daftarKaryawan[mode] = karyawanBaru
     }
 
@@ -180,13 +195,13 @@ const editKaryawan = (target) => {
 
     console.log(daftarKaryawan[indexEdit])
 
-    
+
 
     document.getElementById("txtNik").value = daftarKaryawan[indexEdit].nik;
     document.getElementById("txtNama").value = daftarKaryawan[indexEdit].nama;
     document.getElementById("txtMasa").value = daftarKaryawan[indexEdit].masaKerja;
-    
-    
+
+
 
     mode = indexEdit
 
